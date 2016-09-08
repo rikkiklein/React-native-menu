@@ -14,7 +14,7 @@ import {
 class Search extends Component{
   render(){
     return(
-      <Text>SEARCH</Text>
+      <Text>SEARCH ME</Text>
     )
   }
 }

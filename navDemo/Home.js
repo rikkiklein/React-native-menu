@@ -57,32 +57,34 @@ class Home extends Component {
 
   toggle() {
     //change the t/f for is open
+    console.log("did toggle call?! yes");
     this.setState({
       isOpen: !this.state.isOpen,
     });
   }
 
-  goToSearch() {
-    //go to the search component
-    console.log("go to search now using navigator");
-    // this.navigator.push({
-		// 	component: Search
-		// })
-  }
+  // goToSearch() {
+  //   //go to the search component
+  //   console.log("go to search now using navigator");
+  //   // this.navigator.push({
+	// 	// 	component: Search
+	// 	// })
+  // }
 
   updateMenuState(isOpen) {
-    console.log("$$in update menu state, is open", isOpen);
+
     this.setState({
       isOpen,
     });
-    console.log("$$in update menu after state is", this.state.isOpen);
+
   }
 
   onMenuItemSelected = (item) => {
     this.setState({
-      isOpen: false,
-      selectedItem: item,
-    });
+               isOpen: false,
+               selectedItem: item,
+           });
+           this.props.navigator.replace({ id: item });
   }
 
   render() {
