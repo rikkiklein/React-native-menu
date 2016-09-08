@@ -63,13 +63,13 @@ class Home extends Component {
     });
   }
 
-  // goToSearch() {
-  //   //go to the search component
-  //   console.log("go to search now using navigator");
-  //   // this.navigator.push({
-	// 	// 	component: Search
-	// 	// })
-  // }
+  goToSearch() {
+    //go to the search component
+    console.log("go to search now using navigator");
+    // this.navigator.push({
+		// 	component: Search
+		// })
+  }
 
   updateMenuState(isOpen) {
 
@@ -84,7 +84,7 @@ class Home extends Component {
                isOpen: false,
                selectedItem: item,
            });
-           this.props.navigator.replace({ id: item });
+  this.props.navigator.replace({ id: item });
   }
 
   render() {

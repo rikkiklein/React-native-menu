@@ -40,13 +40,7 @@ class SearchMenu extends Component{
     const menu = <Menu onItemSelected={this.onMenuItemSelected} navigator={this.props.navigator}/>;
 
     return(
-        <SideMenu
-          menu={menu}
-          isOpen={this.state.isOpen}
-          onChange={(isOpen) => this.updateMenuState(isOpen)}>
-            <Button onPress={() => this.toggle()}/>
-            <Search/>
-        </SideMenu>
+      <Search/>
     )
   }
 }
